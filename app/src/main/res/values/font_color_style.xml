@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 字体颜色 -->
+    <style name="font_color_white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="font_color_black1">
+        <item name="android:textColor">@color/black1</item>
+    </style>
+
+    <style name="font_color_red1">
+        <item name="android:textColor">@color/red1</item>
+    </style>
+</resources>

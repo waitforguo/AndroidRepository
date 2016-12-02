@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/header_height"
+    android:layout_gravity="top|center_vertical"
+    android:layout_margin="0dp"
+    android:background="@color/colorPrimary"
+    android:contentInsetLeft="0dp"
+    android:contentInsetStart="0dp"
+    android:fitsSystemWindows="true"
+    android:gravity="center_vertical"
+    android:padding="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+    <RelativeLayout
+        android:id="@+id/rlLeftLayout"
+        android:layout_width="43dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@null"
+            android:visibility="gone"/>
+
+        <com.vanwell.module.zhefengle.app.view.GLFontTextView
+            android:id="@+id/tvLeftCount"
+            style="@style/font_color_white.10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/ivLeft"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="-3.5dp"
+            android:background="@drawable/shape_rect_red_round"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@null"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <com.vanwell.module.zhefengle.app.view.GLFontTextView
+        android:id="@+id/tvLeftText"
+        style="@style/font_color_black1.14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@null"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <com.vanwell.module.zhefengle.app.view.GLFontTextView
+            android:id="@+id/tvNavTitle"
+            style="@style/font_color_black1.16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@null"/>
+
+        <ImageView
+            android:id="@+id/ivTitleImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@null"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRightLayout"
+        android:layout_width="43dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="right|center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@null"
+            android:visibility="gone"/>
+
+        <com.vanwell.module.zhefengle.app.view.GLFontTextView
+            android:id="@+id/tvRightCount"
+            style="@style/font_color_white.10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/ivRight"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="-3.5dp"
+            android:background="@drawable/shape_rect_red_round"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@null"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRightImgAndText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right|center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivRightImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@null"/>
+
+        <com.vanwell.module.zhefengle.app.view.GLFontTextView
+            android:id="@+id/tvRightImgText"
+            style="@style/font_color_red1.14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/ivRightImg"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@null"/>
+
+    </RelativeLayout>
+
+    <com.vanwell.module.zhefengle.app.view.GLFontTextView
+        android:id="@+id/tvRightText"
+        style="@style/font_color_black1.14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center_vertical"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@null"
+        android:visibility="gone"/>
+
+</android.support.v7.widget.Toolbar>

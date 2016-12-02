@@ -1,0 +1,19 @@
+*.iml
+.gradle
+.idea
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+
+/mapping.txt
+/seeds.txt
+/BuglyUploadLog.txt
+
+# freeline
+/freeline
+freeline.py

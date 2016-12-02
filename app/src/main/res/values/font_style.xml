@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--字体大小-->
+
+    <style name="font_color_white.10sp" parent="font_color_white">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="font_color_black1.14sp" parent="font_color_black1">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="font_color_black1.16sp" parent="font_color_black1">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="font_color_red1.14sp" parent="font_color_red1">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
