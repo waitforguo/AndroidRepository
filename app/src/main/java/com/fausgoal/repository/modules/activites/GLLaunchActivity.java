@@ -19,11 +19,12 @@ import com.fausgoal.repository.common.GLViewManager;
 import com.fausgoal.repository.utils.GLDateUtil;
 import com.fausgoal.repository.utils.GLPushUtil;
 import com.fausgoal.repository.utils.GLResourcesUtil;
+import com.fausgoal.repository.utils.GLSchemaUriUtils;
 import com.fausgoal.repository.utils.GLViewClickUtil;
 
 
 /**
- * Description：
+ * Description：启动界面
  * <br/><br/>Created by Fausgoal on 2016/12/2.
  * <br/><br/>
  */
@@ -89,21 +90,38 @@ public class GLLaunchActivity extends GLParentActivity {
         //--------------------------Extra Start-------------------------------------//
 
         Intent intent = getIntent();
-        // 推送判断
-        boolean isPushNotifClick = isPushNotif(intent);
-        if (isPushNotifClick) {
-            String json = intent.getStringExtra(GLPushUtil.INTENT_JSON);
+//        // 推送判断
+//        boolean isPushNotifClick = isPushNotif(intent);
+//        if (isPushNotifClick) {
+//            String json = intent.getStringExtra(GLPushUtil.INTENT_JSON);
+//            if (isSingleTask()) {
+//                // 已经在应用内
+//                GLPushUtil.isOpenPushContent = false;
+//                // 直接打开
+//                // TODO: 2016/12/2
+////                PushDeal.newInstance(mContext, json);
+//                return true;
+//            } else {
+//                // 不在应用内
+//                GLPushUtil.isOpenPushContent = true;
+//                GLPushUtil.mPushContent = json;
+//            }
+//        }
+
+        // shcema跳转判断（网页）
+        boolean isSchemaUri = GLSchemaUriUtils.catchSchemaUri(intent);
+        if (isSchemaUri) {
+            /**
+             * 捕捉到指定事件，需要跳转
+             * 如果launchMode 为 singleTask 之类的，则会进入onNewIntent, 里面记得要setIntent来刷新
+             * 如果不是，则每次activity都是一个新的，跳转后要记得finish掉并出栈
+             */
             if (isSingleTask()) {
-                // 已经在应用内
-                GLPushUtil.isOpenPushContent = false;
-                // 直接打开
-                // TODO: 2016/12/2
-//                PushDeal.newInstance(mContext, json);
-                return true;
+                GLSchemaUriUtils.isOpenSchemaUri = false;
+                // 如果内容未处理成功，直接重新打开MainActivity(launchMode="singleTask")
+                return GLSchemaUriUtils.catchSchemaUriJump(mContext, intent);
             } else {
-                // 不在应用内
-                GLPushUtil.isOpenPushContent = true;
-                GLPushUtil.mPushContent = json;
+                GLSchemaUriUtils.isOpenSchemaUri = true;
             }
         }
         //--------------------------Extra End-------------------------------------//

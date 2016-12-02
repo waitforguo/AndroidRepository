@@ -4,6 +4,8 @@ import android.text.TextUtils;
 
 import com.fausgoal.repository.common.GLConst;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Collection;
 import java.util.Map;
 
@@ -268,5 +270,14 @@ public class GLStringUtil {
             }
         }
         return true;
+    }
+
+    public static String getURLDecoder(String value) {
+        try {
+            value = URLDecoder.decode(value, GLConst.CHARSET_NAME);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return value;
     }
 }
