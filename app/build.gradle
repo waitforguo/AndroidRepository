@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+// freeline
+apply plugin: 'com.antfortune.freeline'
+apply plugin: 'android-apt'
 
 android {
     compileSdkVersion 25
@@ -9,6 +12,7 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -16,6 +20,38 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    productFlavors {
+        android {
+        }
+    }
+
+    sourceSets {
+        debug.setRoot('buildType/debug')
+        main {
+            aidl.srcDirs = ['src/main/java']
+        }
+    }
+
+    // freeline
+    freeline {
+        hack true
+        productFlavor "android"
+        autoDependency false
+    }
+    // freeline
+    useLibrary 'org.apache.http.legacy'
+}
+
+// freeline
+apt {
+    arguments {
+        //老版本的写法2.2.1以前
+        //androidManifestFile variant.processResources.manifestFile
+        //2.2.1以后
+        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
+        resourcePackageName "com.fausgoal.repository"
     }
 }
 
@@ -27,4 +63,16 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
     compile project(':viewpagerindicator')
+
+    // freeline
+    // ***********************************************************
+    releaseCompile project(':runtime:runtime-no-op')
+    testCompile project(':runtime:runtime-no-op')
+    debugCompile project(':runtime:runtime')
+    // ***********************************************************
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    apt "org.androidannotations:androidannotations:4.1.0"
+    compile 'org.androidannotations:androidannotations-api:4.1.0'
+    // freeline end
 }

@@ -3,6 +3,7 @@ package com.fausgoal.repository.modules;
 import android.app.Application;
 import android.content.Context;
 
+import com.antfortune.freeline.FreelineCore;
 import com.fausgoal.repository.threadpool.GLThreadPool;
 
 /**
@@ -30,6 +31,8 @@ public class GLApp extends Application {
         ins = this;
         registerActivityLifecycleCallbacks(new GLAppLifeCycle());
 
+        // init freeline
+        FreelineCore.init(this, this);
         // 初始化数据
         GLInitialize initialize = new GLInitialize();
         initialize.init(getApplicationContext());
