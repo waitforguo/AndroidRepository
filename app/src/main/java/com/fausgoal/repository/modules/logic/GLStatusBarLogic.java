@@ -117,7 +117,7 @@ public class GLStatusBarLogic {
             colorId = R.color.white;
             tintManager.setStatusBarTintColor(GLResourcesUtil.getColor(colorId));
             if (null != mStatusBarColorChangedListener) {
-                mStatusBarColorChangedListener.onStatusBarColorChanged(R.color.white);
+                mStatusBarColorChangedListener.onStatusBarColorChanged(colorId);
             }
         } else {
             colorId = R.color.colorPrimaryDark;

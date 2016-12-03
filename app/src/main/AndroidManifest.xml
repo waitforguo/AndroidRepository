@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <meta-data android:name="asset_statements" android:resource="@string/asset_statements"/>
+
         <activity
             android:name=".modules.activites.GLLaunchActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -29,6 +31,17 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
 
                 <data android:host="ohjh9h7st.qnssl.com" android:scheme="fausgoal"/>
+            </intent-filter>
+
+            <!-- APP Links 方式，Android 23(6.0)版本及以后支持-->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:host="ohjh9h7st.qnssl.com" android:scheme="http"/>
+                <data android:host="ohjh9h7st.qnssl.com" android:scheme="https"/>
             </intent-filter>
         </activity>
 

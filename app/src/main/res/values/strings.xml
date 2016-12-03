@@ -2,4 +2,11 @@
     <string name="app_name">程序港湾</string>
 
     <string name="skip">跳过</string>
+
+    <string name="asset_statements" translatable="false">
+        [{
+        \"include\": \"https://ohjh9h7st.qnssl.com/.well-known/assetlinks.json\"
+        }]
+    </string>
+
 </resources>
