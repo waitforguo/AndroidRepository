@@ -1,3 +1,3 @@
-include ':app', ':viewpagerindicator'
+include ':app', ':viewpagerindicator', ':Coffee'
 // freeline
 include ':runtime:runtime', ':runtime:runtime-no-op'

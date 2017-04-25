@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:2.3.1'
 
         // freeline https://github.com/alibaba/freeline
         classpath 'com.antfortune.freeline:gradle:0.8.2.1611262211'
