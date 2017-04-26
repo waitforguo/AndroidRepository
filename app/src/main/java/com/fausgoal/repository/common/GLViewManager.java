@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.fausgoal.repository.modules.activites.GLMainActivity;
-import com.fausgoal.repository.modules.activites.GLLaunchActivity;
+import com.fausgoal.repository.modules.main.GLMainActivity;
+import com.fausgoal.repository.modules.launch.GLLaunchActivity;
 import com.fausgoal.repository.utils.GLLog;
 
 import java.util.Stack;

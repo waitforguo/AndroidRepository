@@ -1,4 +1,4 @@
-package com.fausgoal.repository.modules.activites;
+package com.fausgoal.repository.modules.launch;
 
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
@@ -10,7 +10,7 @@ import com.fausgoal.repository.callback.IGLOnListItemClickListener;
 import com.fausgoal.repository.common.GLCommonVariables;
 import com.fausgoal.repository.common.GLConst;
 import com.fausgoal.repository.common.GLViewManager;
-import com.fausgoal.repository.modules.adapters.GLGuideAdapter;
+import com.fausgoal.repository.modules.main.GLMainActivity;
 import com.fausgoal.repository.utils.GLResourcesUtil;
 import com.viewpagerindicator.GuideCirclePageIndicator;
 

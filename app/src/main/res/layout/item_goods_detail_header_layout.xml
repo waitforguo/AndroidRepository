@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/header_height"
+    android:layout_gravity="top|center_vertical"
+    android:layout_margin="0dp"
+    android:background="@color/white"
+    android:contentInsetLeft="0dp"
+    android:contentInsetStart="0dp"
+    android:fitsSystemWindows="true"
+    android:gravity="center_vertical"
+    android:padding="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+    <RelativeLayout
+        android:id="@+id/rlLeftLayout"
+        android:layout_width="43dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/icon_back_round_detail"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvNavTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@null"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRightImgAndText"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_gravity="right|center_vertical"
+        android:gravity="right|center_vertical"
+        android:paddingBottom="2dp"
+        android:paddingEnd="10dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="10dp"
+        android:paddingStart="2dp"
+        android:paddingTop="2dp">
+
+        <ImageView
+            android:id="@+id/ivRightImg"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_share"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

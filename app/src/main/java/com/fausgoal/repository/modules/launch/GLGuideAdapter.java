@@ -1,4 +1,4 @@
-package com.fausgoal.repository.modules.adapters;
+package com.fausgoal.repository.modules.launch;
 
 import android.content.Context;
 import android.view.View;

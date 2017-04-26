@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
-import com.fausgoal.repository.modules.activites.GLGuideActivity;
-import com.fausgoal.repository.modules.activites.GLLaunchActivity;
+import com.fausgoal.repository.modules.launch.GLGuideActivity;
+import com.fausgoal.repository.modules.launch.GLLaunchActivity;
 
 
 /**

@@ -20,7 +20,7 @@ import com.fausgoal.repository.R;
 import com.fausgoal.repository.common.GLConst;
 import com.fausgoal.repository.common.GLViewManager;
 import com.fausgoal.repository.modules.GLApp;
-import com.fausgoal.repository.modules.activites.GLLaunchActivity;
+import com.fausgoal.repository.modules.launch.GLLaunchActivity;
 import com.fausgoal.repository.modules.logic.GLStatusBarLogic;
 import com.fausgoal.repository.modules.logic.GLToolbarLogic;
 import com.fausgoal.repository.utils.GLEventAnalysisUtil;

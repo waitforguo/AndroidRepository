@@ -1,4 +1,4 @@
-package com.fausgoal.repository.modules.activites;
+package com.fausgoal.repository.modules.launch;
 
 
 import android.content.Intent;
@@ -16,6 +16,7 @@ import com.fausgoal.repository.base.GLParentActivity;
 import com.fausgoal.repository.common.GLCommonVariables;
 import com.fausgoal.repository.common.GLConst;
 import com.fausgoal.repository.common.GLViewManager;
+import com.fausgoal.repository.modules.main.GLMainActivity;
 import com.fausgoal.repository.utils.GLDateUtil;
 import com.fausgoal.repository.utils.GLPushUtil;
 import com.fausgoal.repository.utils.GLResourcesUtil;

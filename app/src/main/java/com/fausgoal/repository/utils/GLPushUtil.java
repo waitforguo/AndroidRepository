@@ -10,7 +10,7 @@ import android.support.v4.app.NotificationCompat;
 import com.fausgoal.repository.R;
 import com.fausgoal.repository.common.GLConst;
 import com.fausgoal.repository.modules.GLApp;
-import com.fausgoal.repository.modules.activites.GLLaunchActivity;
+import com.fausgoal.repository.modules.launch.GLLaunchActivity;
 
 import org.json.JSONException;
 

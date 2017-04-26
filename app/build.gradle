@@ -87,7 +87,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
     compile project(':viewpagerindicator')
-
     // freeline
     // ***********************************************************
     releaseCompile project(':runtime:runtime-no-op')
@@ -99,4 +98,5 @@ dependencies {
     apt "org.androidannotations:androidannotations:4.1.0"
     compile 'org.androidannotations:androidannotations-api:4.1.0'
     // freeline end
+    compile 'com.marshalchen.ultimaterecyclerview:library:0.7.2'
 }
